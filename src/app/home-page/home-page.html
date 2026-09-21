@@ -1,0 +1,889 @@
+<div class="container">
+    <div class="section-one">
+        <div class="header">
+            <div class="head-line"><span></span></div>
+            <div class="header-top-line">AN INTELIGENT HR PLATFORM</div>
+            <div class="head">
+                <span>HR</span> MINDS
+            </div>
+            <div class="body">
+                A single platform for the complete employee lifecycle — hiring, attendance, leave, payroll, statutory
+                compliance, performance and exit — delivered on web and mobile, and built for the way Indian healthcare
+                organisations actually run.
+            </div>
+            <div>
+                <button (click)="goToAssessment()">REQUEST DEMO<svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                        height="1em" viewBox="0 0 1024 1024">
+                        <path d="M0 0h1024v1024H0z" fill="none" />
+                        <path fill="#fff"
+                            d="M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-.7 5.2-2L869 536.2a32.07 32.07 0 0 0 0-48.4" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footer-part">
+                <div class="number">
+                    {{count1()}}+
+                </div>
+                <div class="">
+                    FUNCTIONAL MODULES
+                </div>
+            </div>
+            <div class="footer-part">
+                <div class="number">
+                    {{count2()}}
+                </div>
+                <div class="">
+                    USER ROLES
+                </div>
+            </div>
+            <div class="footer-part">
+                <div class="number">
+                    {{count3()}}
+                </div>
+                <div class="">
+                    APPROVAL LEVELS
+                </div>
+            </div>
+            <div class="footer-part">
+                <div class="number">
+                    {{count4()}}
+                </div>
+                <div class="">
+                    PLATSFORMS: WEB & MOBILE
+                </div>
+            </div>
+            <div class="footer-part">
+                <div class="number">
+                    {{count5()}}+
+                </div>
+                <div class="">
+                    AUTOMATED JOBS
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="section-two">
+    <div class="left">
+        <div class="left-top-line">THE COMPLETE EMPLOYEEE LIFE CYCLE</div>
+        <div class="section-two-head">
+            Everthing HR needs.
+            <br>
+            <span>In one connected platform.</span>
+        </div>
+        <div class="section-two-para">
+            From coe HR and attendance to payroll, compliance,
+            performance and exit - <span>HR Minds</span> all processes together,
+            giving you control, visibility and a better employee experience.
+        </div>
+
+        <div class="section-two-bottom">
+            <div class="bottom">
+                <div class="two-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="none" stroke="#d57101" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5" d="m5 14l3.5 3.5L19 6.5" />
+                    </svg>
+
+                </div>
+                <div class="bottom-text">All-in-one platform</div>
+            </div>
+
+            <div class="bottom">
+                <div class="two-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="none" stroke="#d57101" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5" d="m5 14l3.5 3.5L19 6.5" />
+                    </svg>
+
+                </div>
+                <div class="bottom-text">More controll, more visibility</div>
+            </div>
+            <div class="bottom">
+                <div class="two-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="none" stroke="#d57101" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5" d="m5 14l3.5 3.5L19 6.5" />
+                    </svg>
+
+                </div>
+                <div class="bottom-text">A better employee experience</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="right">
+        <img src="/image/section-two.png" alt="">
+    </div>
+</div>
+
+<div class="section-seven">
+
+    <div class="section-left">
+
+        <div class="section-left-head">
+
+            <div class="seven-top-line">
+                ALL IN ONE PLATFORM
+            </div>
+            <div class="seven-head">Powerful Modules, <span>Real Impact.</span></div>
+
+            <div class="seven-para">
+                45+ features across core HR, payroll, compliance,
+                performance and more - designed to work together
+            </div>
+        </div>
+
+        <div class="seven-cards">
+
+            @for (module of modules; track module.id) {
+
+            <div [class.active]="selectedModule.id === module.id" (click)="selectModule(module)">
+
+                <div class="seven-card">
+                    <div>
+                        <img [src]="module.icon" [alt]="module.title" class="module-icon">
+                    </div>
+
+                    <div class="card-heading">{{ module.title }}</div>
+                </div>
+
+            </div>
+
+            }
+
+        </div>
+
+        <div class="module-btn">
+            <button (click)="goToAssessment()">Explore Modules<svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                    height="1em" viewBox="0 0 1024 1024">
+                    <path d="M0 0h1024v1024H0z" fill="none" />
+                    <path fill="#fff"
+                        d="M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-.7 5.2-2L869 536.2a32.07 32.07 0 0 0 0-48.4" />
+                </svg>
+            </button>
+        </div>
+
+    </div>
+
+
+    <div class="card-details">
+
+        <img [src]="selectedModule.image" [alt]="selectedModule.title" class="module-image">
+
+        <div class="card-details-head">
+            {{ selectedModule.title }}
+        </div>
+
+        <div class="card-details-para">
+            {{ selectedModule.description }}
+        </div>
+
+        <ul>
+            @for (detail of selectedModule.details; track detail) {
+            <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <path fill="#e67d08"
+                        d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z" />
+                </svg>{{ detail }}</li>
+            }
+        </ul>
+
+    </div>
+
+</div>
+
+<div class="section-three">
+    <div class="attendance-left">
+        <div class="attendance-top-line">ATTENDANCE & SHIFTS</div>
+        <div class="attendance-head">Felxible tracking of every team</div>
+        <div class="attendance-para">Biometric, GPS, Mobile attendance witn sifht planning, over-time, comp-off, and
+            night shifts handling.
+        </div>
+        <div>
+            <ul>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="#e67d08"
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z" />
+                    </svg>Biometric integration</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="#e67d08"
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z" />
+                    </svg>Mobile GPS attendance</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="#e67d08"
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z" />
+                    </svg>Shift planning & roaster management</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="#e67d08"
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z" />
+                    </svg>Over-time and Comp-off approvals</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="#e67d08"
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z" />
+                    </svg>Night shift & late arrival tracking</li>
+            </ul>
+        </div>
+    </div>
+    <div class="product_floating_shape product_floating_shape_3"></div>
+
+    <div class="attendance-img">
+        <img src="/image/attendance.png" alt="">
+    </div>
+
+    <div class="approval-left">
+        <div class="">
+            <div class="approval-top-line">
+                APPROVAL WORKFLOW
+            </div>
+            <div class="approval-head">
+                One approval flow,
+                <span>across the organisation.</span>
+            </div>
+            <div class="approval-para">
+                Comman approval hierarchy for leave, permission, over-time, WFH and other.
+            </div>
+        </div>
+        <div class="approval-left-bottom">
+            <div class="stats">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36">
+                        <path d="M0 0h36v36H0z" fill="none" />
+                        <path fill="#05185c"
+                            d="M16.43 16.69a7 7 0 1 1 7-7a7 7 0 0 1-7 7m0-11.92a5 5 0 1 0 5 5a5 5 0 0 0-5-5M22 17.9a25.4 25.4 0 0 0-16.12 1.67a4.06 4.06 0 0 0-2.31 3.68v5.95a1 1 0 1 0 2 0v-5.95a2 2 0 0 1 1.16-1.86a22.9 22.9 0 0 1 9.7-2.11a23.6 23.6 0 0 1 5.57.66Zm.14 9.51h6.14v1.4h-6.14z" />
+                        <path fill="#05185c"
+                            d="M33.17 21.47H28v2h4.17v8.37H18v-8.37h6.3v.42a1 1 0 0 0 2 0V20a1 1 0 0 0-2 0v1.47H17a1 1 0 0 0-1 1v10.37a1 1 0 0 0 1 1h16.17a1 1 0 0 0 1-1V22.47a1 1 0 0 0-1-1" />
+                    </svg>
+
+                </div>
+                <div class="stat">
+                    <div class="stat-head">
+                        Employee
+                    </div>
+                    <div class="stat-para">
+                        Submits request
+                    </div>
+                </div>
+            </div>
+            <div class="stats">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <g fill="none" stroke="#05185c" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5">
+                            <path
+                                d="M20 22v-5c0-1.885 0-2.828-.586-3.414S17.886 13 16 13l-4 9l-4-9c-1.886 0-2.828 0-3.414.586S4 15.115 4 17v5" />
+                            <path
+                                d="m12 15l-.5 4l.5 1.5l.5-1.5zm0 0l-1-2h2zm3.5-8.5v-1a3.5 3.5 0 0 0-7 0v1a3.5 3.5 0 1 0 7 0" />
+                        </g>
+                    </svg>
+                </div>
+                <div class="stat">
+                    <div class="stat-head">
+                        Incharge
+                    </div>
+                    <div class="stat-para">
+                        Level 1 approval
+                    </div>
+                </div>
+            </div>
+            <div class="stats">
+                <div class="icon"><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <g fill="none" stroke="#05185c" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5">
+                            <path
+                                d="M20 22v-5c0-1.885 0-2.828-.586-3.414S17.886 13 16 13l-4 9l-4-9c-1.886 0-2.828 0-3.414.586S4 15.115 4 17v5" />
+                            <path
+                                d="m12 15l-.5 4l.5 1.5l.5-1.5zm0 0l-1-2h2zm3.5-8.5v-1a3.5 3.5 0 0 0-7 0v1a3.5 3.5 0 1 0 7 0" />
+                        </g>
+                    </svg>
+                </div>
+                <div class="stat">
+                    <div class="stat-head">
+                        Manager
+                    </div>
+                    <div class="stat-para">
+                        Level 2 approval
+                    </div>
+                </div>
+            </div>
+            <div class="stats">
+                <div class="icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <g fill="none" stroke="#05185c" stroke-linecap="round" stroke-linejoin="round"
+                            stroke-width="1.5">
+                            <path
+                                d="M20 22v-5c0-1.885 0-2.828-.586-3.414S17.886 13 16 13l-4 9l-4-9c-1.886 0-2.828 0-3.414.586S4 15.115 4 17v5" />
+                            <path
+                                d="m12 15l-.5 4l.5 1.5l.5-1.5zm0 0l-1-2h2zm3.5-8.5v-1a3.5 3.5 0 0 0-7 0v1a3.5 3.5 0 1 0 7 0" />
+                        </g>
+                    </svg>
+                </div>
+                <div class="stat">
+                    <div class="stat-head">
+                        HR Manager
+                    </div>
+                    <div class="stat-para">
+                        Final approval
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="section-six">
+    <div class="payroll-left">
+        <div class="payroll-top-line">PAYROLL & COMPLANCE</div>
+        <div class="payroll-head">Payroll without <span>month-end chaos </span></div>
+        <div class="payroll-para">A complete, accurate and compliant payroll - from attendance to payslip, all in one
+            place.
+        </div>
+
+        <div>
+            <ul>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="#e67d08"
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z" />
+                    </svg>Attendance-driven payroll calculation</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="#e67d08"
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z" />
+                    </svg>Reusable salary templates</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="#e67d08"
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z" />
+                    </svg>Statutory return files</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="#e67d08"
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z" />
+                    </svg>Filing and reconciliation records</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="#e67d08"
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z" />
+                    </svg>Leave, overtime, incentives and arrears integration</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="#e67d08"
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z" />
+                    </svg>PF, ESI, PT, LWF and TDS calculations</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="#e67d08"
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z" />
+                    </svg>Employer contribution tracking</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="#e67d08"
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z" />
+                    </svg>Payslip generation and dispatch</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="payroll-right">
+        <div class="payroll-top">
+            <div class="payroll-step">
+                <div class="orange">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 36 36">
+                        <path d="M0 0h36v36H0z" fill="none" />
+                        <path fill="#e39313"
+                            d="M32.25 6H29v2h3v22H4V8h3V6H3.75A1.78 1.78 0 0 0 2 7.81v22.38A1.78 1.78 0 0 0 3.75 32h28.5A1.78 1.78 0 0 0 34 30.19V7.81A1.78 1.78 0 0 0 32.25 6"
+                            class="clr-i-outline clr-i-outline-path-1" />
+                        <path fill="#e39313" d="M8 14h2v2H8z" class="clr-i-outline clr-i-outline-path-2" />
+                        <path fill="#e39313" d="M14 14h2v2h-2z" class="clr-i-outline clr-i-outline-path-3" />
+                        <path fill="#e39313" d="M20 14h2v2h-2z" class="clr-i-outline clr-i-outline-path-4" />
+                        <path fill="#e39313" d="M26 14h2v2h-2z" class="clr-i-outline clr-i-outline-path-5" />
+                        <path fill="#e39313" d="M8 19h2v2H8z" class="clr-i-outline clr-i-outline-path-6" />
+                        <path fill="#e39313" d="M14 19h2v2h-2z" class="clr-i-outline clr-i-outline-path-7" />
+                        <path fill="#e39313" d="M20 19h2v2h-2z" class="clr-i-outline clr-i-outline-path-8" />
+                        <path fill="#e39313" d="M26 19h2v2h-2z" class="clr-i-outline clr-i-outline-path-9" />
+                        <path fill="#e39313" d="M8 24h2v2H8z" class="clr-i-outline clr-i-outline-path-10" />
+                        <path fill="#e39313" d="M14 24h2v2h-2z" class="clr-i-outline clr-i-outline-path-11" />
+                        <path fill="#e39313" d="M20 24h2v2h-2z" class="clr-i-outline clr-i-outline-path-12" />
+                        <path fill="#e39313" d="M26 24h2v2h-2z" class="clr-i-outline clr-i-outline-path-13" />
+                        <path fill="#e39313" d="M10 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1"
+                            class="clr-i-outline clr-i-outline-path-14" />
+                        <path fill="#e39313" d="M26 10a1 1 0 0 0 1-1V3a1 1 0 0 0-2 0v6a1 1 0 0 0 1 1"
+                            class="clr-i-outline clr-i-outline-path-15" />
+                        <path fill="#e39313" d="M13 6h10v2H13z" class="clr-i-outline clr-i-outline-path-16" />
+                        <path fill="none" d="M0 0h36v36H0z" />
+                    </svg>
+
+                </div>
+                <div>Draft</div>
+            </div>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+                    <path d="M0 0h16v16H0z" fill="none" />
+                    <path fill="#1797dc" fill-rule="evenodd"
+                        d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1" />
+                </svg>
+
+
+            </div>
+            <div class="payroll-step">
+                <div class="blue">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <g fill="#1376e3" fill-rule="evenodd" clip-rule="evenodd">
+                            <path
+                                d="M14.811 14.811a1 1 0 0 1 1.414 0l5.482 5.482a1 1 0 1 1-1.414 1.414l-5.482-5.482a1 1 0 0 1 0-1.414" />
+                            <path
+                                d="M2 10.333a8.333 8.333 0 1 1 16.667 0a8.333 8.333 0 0 1-16.667 0M10.333 4a6.333 6.333 0 1 0 0 12.667a6.333 6.333 0 0 0 0-12.667" />
+                        </g>
+                    </svg>
+
+                </div>
+                <div>Review</div>
+            </div>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+                    <path d="M0 0h16v16H0z" fill="none" />
+                    <path fill="#1797dc" fill-rule="evenodd"
+                        d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1" />
+                </svg>
+
+            </div>
+            <div class="payroll-step">
+                <div class="green">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="#59e313" fill-rule="evenodd"
+                            d="m7.306 7.758l.343 3.088l-.694.055a2.11 2.11 0 0 0-1.915 1.764a20.6 20.6 0 0 0 0 6.67A2.11 2.11 0 0 0 6.955 21.1l1.496.12c2.362.188 4.736.188 7.098 0l1.496-.12a2.11 2.11 0 0 0 1.915-1.764a20.6 20.6 0 0 0 0-6.67a2.11 2.11 0 0 0-1.915-1.764l-.694-.055l.343-3.088q.06-.548 0-1.095l-.023-.205a4.7 4.7 0 0 0-9.342 0l-.023.205a5 5 0 0 0 0 1.095M12.374 3.8A3.2 3.2 0 0 0 8.82 6.624l-.023.205a3.5 3.5 0 0 0 0 .764l.349 3.139c1.9-.122 3.807-.122 5.708 0l.349-3.14a3.5 3.5 0 0 0 0-.763l-.023-.205a3.2 3.2 0 0 0-2.806-2.825M12 14.5a1.5 1.5 0 1 0 0 3a1.5 1.5 0 0 0 0-3"
+                            clip-rule="evenodd" />
+                    </svg>
+
+                </div>
+                <div>Lock</div>
+
+            </div>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+                    <path d="M0 0h16v16H0z" fill="none" />
+                    <path fill="#1797dc" fill-rule="evenodd"
+                        d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1" />
+                </svg>
+
+            </div>
+            <div class="payroll-step">
+                <div class="orange">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="#e39313"
+                            d="M17 19.22H5V7h7V5H5c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-7h-2z" />
+                        <path fill="#e39313"
+                            d="M19 2h-2v3h-3c.01.01 0 2 0 2h3v2.99c.01.01 2 0 2 0V7h3V5h-3zM7 9h8v2H7zm0 3v2h8v-2h-3zm0 3h8v2H7z" />
+                    </svg>
+
+                </div>
+                <div>Publish</div>
+
+            </div>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+                    <path d="M0 0h16v16H0z" fill="none" />
+                    <path fill="#1797dc" fill-rule="evenodd"
+                        d="M8 1a.5.5 0 0 1 .5.5v11.793l3.146-3.147a.5.5 0 0 1 .708.708l-4 4a.5.5 0 0 1-.708 0l-4-4a.5.5 0 0 1 .708-.708L7.5 13.293V1.5A.5.5 0 0 1 8 1" />
+                </svg>
+
+            </div>
+            <div class="payroll-step">
+                <div class="blue">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="0.99em" height="1em" viewBox="0 0 1792 1824">
+                        <path d="M0 0h1792v1824H0z" fill="none" />
+                        <path fill="#1376e3"
+                            d="M1764 43q33 24 27 64l-256 1536q-5 29-32 45q-14 8-31 8q-11 0-24-5l-527-215l-298 327q-18 21-47 21q-14 0-23-4q-19-7-30-23.5t-11-36.5v-452L40 1115q-37-14-40-55q-3-39 32-59L1696 41q35-21 68 2m-342 1499l221-1323l-1434 827l336 137l863-639l-478 797z" />
+                    </svg>
+
+                </div>
+                <div>Dispatch</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="payroll-image">
+        <img src="/image/payroll.png" alt="">
+    </div>
+</div>
+
+<div class="section-five">
+    <div class="five-card-1">
+        <div class="five-card-head">
+            <div class="five-card-1-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+                    <path d="M0 0h16v16H0z" fill="none" />
+                    <g fill="#e38113">
+                        <path
+                            d="m11.42 2l3.428 6l-3.428 6H4.58L1.152 8L4.58 2zM4.58 1a1 1 0 0 0-.868.504l-3.428 6a1 1 0 0 0 0 .992l3.428 6A1 1 0 0 0 4.58 15h6.84a1 1 0 0 0 .868-.504l3.429-6a1 1 0 0 0 0-.992l-3.429-6A1 1 0 0 0 11.42 1z" />
+                        <path
+                            d="M6.848 5.933a2.5 2.5 0 1 0 2.5 4.33a2.5 2.5 0 0 0-2.5-4.33m-1.78 3.915a3.5 3.5 0 1 1 6.061-3.5a3.5 3.5 0 0 1-6.062 3.5z" />
+                    </g>
+                </svg>
+            </div>
+            <div>
+                <div class="section-five-top-line">Automation & Integration</div>
+                <div class="section-head-line">HR that keeps working after you log-out</div>
+            </div>
+        </div>
+
+        <div>
+            <ul>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="#e67d08"
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z" />
+                    </svg>
+                    Automated biometric sync</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="#e67d08"
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z" />
+                    </svg>
+                    Monthly leave accural</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="#e67d08"
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z" />
+                    </svg>
+                    Survey remainder</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="#e67d08"
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z" />
+                    </svg>
+                    Offer expiry allerts</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="#e67d08"
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z" />
+                    </svg>
+                    Attendance & compliance check</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="five-card-2">
+        <div class="five-card-head">
+            <div class="five-card-2-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48">
+                    <path d="M0 0h48v48H0z" fill="none" />
+                    <g fill="none" stroke="#0147d5" stroke-linejoin="round" stroke-width="4">
+                        <path
+                            d="M6 9.256L24.009 4L42 9.256v10.778A26.32 26.32 0 0 1 24.003 45A26.32 26.32 0 0 1 6 20.029z" />
+                        <path stroke-linecap="round" d="m15 23l7 7l12-12" />
+                    </g>
+                </svg>
+
+            </div>
+            <div>
+                <div class="section-five-top-line">Security & Goverance</div>
+                <div class="section-head-line">Right access to the right people</div>
+            </div>
+        </div>
+        <div>
+            <ul>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="#e67d08"
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z" />
+                    </svg>Role-based permission</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="#e67d08"
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z" />
+                    </svg>Branches and Department</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="#e67d08"
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z" />
+                    </svg>Complete audit logs</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="#e67d08"
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z" />
+                    </svg>Secure infrastructure</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="five-card-3">
+        <div class="five-card-head">
+            <div class="five-card-3-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 20 20">
+                    <path d="M0 0h20v20H0z" fill="none" />
+                    <path fill="#e38113"
+                        d="M17 1h-2a1 1 0 0 0-1 1v16.992h4V2a1 1 0 0 0-1-1m-6 6H9a1 1 0 0 0-1 1v10.992h4V8a1 1 0 0 0-1-1m-6 6H3a1 1 0 0 0-1 1v4.992h4V14a1 1 0 0 0-1-1" />
+                </svg>
+
+            </div>
+            <div>
+                <div class="section-five-top-line">Analytics & Reporting</div>
+                <div class="section-head-line">Turn HR data into decision</div>
+            </div>
+        </div>
+        <div>
+            <ul>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="#e67d08"
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z" />
+                    </svg>HR operations dashboard</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="#e67d08"
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z" />
+                    </svg>Attendance and overtime analytics</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="#e67d08"
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z" />
+                    </svg>Payroll readiness & cost insights</li>
+                <li><svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none" />
+                        <path fill="#e67d08"
+                            d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10s10-4.5 10-10S17.5 2 12 2m-2 15l-5-5l1.41-1.41L10 14.17l7.59-7.59L19 8z" />
+                    </svg>Module usage and data export</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div class="section-four">
+    <div class="section-top-line">
+        DO MORE WITH HR MINDS
+    </div>
+    <div class="section-four-head">
+        Build for the way Indian Organisation work.
+    </div>
+    <div class="cards">
+        <div class="card">
+            <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 24 24">
+                    <path d="M0 0h24v24H0z" fill="none" />
+                    <g fill="none">
+                        <path fill="url(#SVGNA3dywjJ)"
+                            d="M4 4.25A2.25 2.25 0 0 1 6.25 2h7.5A2.25 2.25 0 0 1 16 4.25V9.5h1.75A2.25 2.25 0 0 1 20 11.75V21h-2v1H4.75a.75.75 0 0 1-.75-.75z" />
+                        <path fill="url(#SVG1DpGAd1Y)"
+                            d="M4 4.25A2.25 2.25 0 0 1 6.25 2h7.5A2.25 2.25 0 0 1 16 4.25V9.5h1.75A2.25 2.25 0 0 1 20 11.75V21h-2v1H4.75a.75.75 0 0 1-.75-.75z" />
+                        <path fill="url(#SVGRWGg8c3V)"
+                            d="M4 4.25A2.25 2.25 0 0 1 6.25 2h7.5A2.25 2.25 0 0 1 16 4.25V9.5h1.75A2.25 2.25 0 0 1 20 11.75V21h-2v1H4.75a.75.75 0 0 1-.75-.75z" />
+                        <path fill="url(#SVGNJmpe0Lu)"
+                            d="M7 6.5a1 1 0 1 0 2 0a1 1 0 0 0-2 0m1 6a1 1 0 1 0 0 2a1 1 0 0 0 0-2M8 9a1 1 0 1 0 0 2a1 1 0 0 0 0-2m4-3.5a1 1 0 1 0 0 2a1 1 0 0 0 0-2M12 9a1 1 0 1 0 0 2a1 1 0 0 0 0-2" />
+                        <path fill="url(#SVGhNGMhrUR)" d="M15 17h5v6h-5z" />
+                        <path fill="url(#SVG98uqWbqx)"
+                            d="M18.1 13.325a1 1 0 0 0-1.2 0l-3.5 2.625a1 1 0 0 0-.4.8V22a1 1 0 0 0 1 1h2v-3.5a.5.5 0 0 1 .5-.5h2a.5.5 0 0 1 .5.5V23h2a1 1 0 0 0 1-1v-5.25a1 1 0 0 0-.4-.8z" />
+                        <path fill="url(#SVGCbf0Jb0u)" fill-rule="evenodd"
+                            d="m17.5 13.95l4.04 3.142a.75.75 0 1 0 .92-1.184l-4.193-3.261a1.25 1.25 0 0 0-1.534 0l-4.193 3.261a.75.75 0 1 0 .92 1.184z"
+                            clip-rule="evenodd" />
+                        <defs>
+                            <linearGradient id="SVGNA3dywjJ" x1="4" x2="23.081" y1="2.625" y2="22.168"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#29c3ff" />
+                                <stop offset="1" stop-color="#2764e7" />
+                            </linearGradient>
+                            <linearGradient id="SVGNJmpe0Lu" x1="9.15" x2="13.953" y1="4.5" y2="15.067"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#fdfdfd" />
+                                <stop offset="1" stop-color="#b3e0ff" />
+                            </linearGradient>
+                            <linearGradient id="SVGhNGMhrUR" x1="17.5" x2="14.694" y1="17" y2="23.238"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#944600" />
+                                <stop offset="1" stop-color="#cd8e02" />
+                            </linearGradient>
+                            <linearGradient id="SVG98uqWbqx" x1="13.859" x2="21.397" y1="14.109" y2="21.439"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#ffd394" />
+                                <stop offset="1" stop-color="#ffb357" />
+                            </linearGradient>
+                            <linearGradient id="SVGCbf0Jb0u" x1="18" x2="17.263" y1="11" y2="16.847"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#ff921f" />
+                                <stop offset="1" stop-color="#eb4824" />
+                            </linearGradient>
+                            <radialGradient id="SVG1DpGAd1Y" cx="0" cy="0" r="1"
+                                gradientTransform="matrix(0 8.25 -4.75 0 16 20.75)" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#4a43cb" />
+                                <stop offset=".914" stop-color="#4a43cb" stop-opacity="0" />
+                            </radialGradient>
+                            <radialGradient id="SVGRWGg8c3V" cx="0" cy="0" r="1"
+                                gradientTransform="matrix(-4.5 3.5 -2.36586 -3.04182 17 16)"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#4a43cb" />
+                                <stop offset=".914" stop-color="#4a43cb" stop-opacity="0" />
+                            </radialGradient>
+                        </defs>
+                    </g>
+                </svg>
+
+            </div>
+            <div class="card-text">
+                <div class="card-head">
+                    Multi-entity support
+                </div>
+                <div class="card-para ">
+                    Muliple-legal entitie and statutory registration.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 16 16">
+                    <path d="M0 0h16v16H0z" fill="none" />
+                    <g fill="none">
+                        <path fill="url(#SVGgc1zneTU)"
+                            d="M5.5 10L9 9.5l3.5.5h.264c.155 0 .308.036.447.106l1.342.67A.81.81 0 0 1 15 11.5H3a.81.81 0 0 1 .447-.724l1.342-.67A1 1 0 0 1 5.236 10z" />
+                        <path fill="url(#SVGWsJYqbPw)"
+                            d="M5.5 10L9 9.5l3.5.5h.264c.155 0 .308.036.447.106l1.342.67A.81.81 0 0 1 15 11.5H3a.81.81 0 0 1 .447-.724l1.342-.67A1 1 0 0 1 5.236 10z" />
+                        <path fill="url(#SVG1emb8UIE)" d="M3.5 11a.5.5 0 0 0 0 1h11a.5.5 0 0 0 0-1z" />
+                        <path fill="url(#SVGciNQDPid)"
+                            d="M4 4.5A1.5 1.5 0 0 1 5.5 3h7A1.5 1.5 0 0 1 14 4.5v4a1.5 1.5 0 0 1-1.5 1.5h-7A1.5 1.5 0 0 1 4 8.5z" />
+                        <path fill="url(#SVGjeV2bcwA)" fill-opacity=".3"
+                            d="M5.5 3A1.5 1.5 0 0 0 4 4.5v4A1.5 1.5 0 0 0 5.5 10h-.264a1 1 0 0 0-.447.106l-1.342.67A.81.81 0 0 0 3 11.5a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5a.81.81 0 0 0-.447-.724l-1.342-.67a1 1 0 0 0-.447-.106H12.5A1.5 1.5 0 0 0 14 8.5v-4A1.5 1.5 0 0 0 12.5 3z" />
+                        <path fill="url(#SVGvyCfdciA)"
+                            d="M2.5 5A1.5 1.5 0 0 0 1 6.5v6A1.5 1.5 0 0 0 2.5 14h3A1.5 1.5 0 0 0 7 12.5v-6A1.5 1.5 0 0 0 5.5 5z" />
+                        <path fill="url(#SVGkiOjzjCO)" d="M4 12.5a.5.5 0 1 1 0-1a.5.5 0 0 1 0 1" />
+                        <defs>
+                            <radialGradient id="SVGgc1zneTU" cx="0" cy="0" r="1"
+                                gradientTransform="rotate(15.65 -26.912 6.479)scale(29.931 24.247)"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#f08af4" />
+                                <stop offset=".265" stop-color="#9c6cfe" />
+                                <stop offset=".453" stop-color="#4e44db" />
+                            </radialGradient>
+                            <radialGradient id="SVGjeV2bcwA" cx="0" cy="0" r="1"
+                                gradientTransform="matrix(2.5 0 0 5.23437 6 9.5)" gradientUnits="userSpaceOnUse">
+                                <stop offset=".148" stop-color="#4a43cb" />
+                                <stop offset="1" stop-color="#4a43cb" stop-opacity="0" />
+                            </radialGradient>
+                            <radialGradient id="SVGvyCfdciA" cx="0" cy="0" r="1"
+                                gradientTransform="rotate(60.63 -1.88 .526)scale(14.9101 30.1586)"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#f08af4" />
+                                <stop offset=".535" stop-color="#9c6cfe" />
+                                <stop offset="1" stop-color="#4e44db" />
+                            </radialGradient>
+                            <radialGradient id="SVGkiOjzjCO" cx="0" cy="0" r="1"
+                                gradientTransform="rotate(69.573 -6.653 8.19)scale(2.59661 2.03173)"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#decbff" />
+                                <stop offset="1" stop-color="#d6cfff" />
+                            </radialGradient>
+                            <linearGradient id="SVGWsJYqbPw" x1="15" x2="13.951" y1="11.976" y2="7.257"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#63686e" />
+                                <stop offset="1" stop-color="#889096" />
+                            </linearGradient>
+                            <linearGradient id="SVG1emb8UIE" x1="15" x2="14.846" y1="11.929" y2="10.084"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#889096" />
+                                <stop offset="1" stop-color="#aab3bd" />
+                            </linearGradient>
+                            <linearGradient id="SVGciNQDPid" x1="11" x2="11.408" y1="3" y2="11.007"
+                                gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#6ce0ff" />
+                                <stop offset="1" stop-color="#4894fe" />
+                            </linearGradient>
+                        </defs>
+                    </g>
+                </svg>
+
+            </div>
+            <div class="card-text">
+
+                <div class="card-head">
+                    Web & mobile access
+                </div>
+                <div class="card-para">
+                    Browser-based admin and branded mobile apps.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 48 48">
+                    <path d="M0 0h48v48H0z" fill="none" />
+                    <g fill="none">
+                        <path fill="#8fbffa"
+                            d="M1.5 39c0 1.966.073 3.326.169 4.27c.201 1.99 1.798 3.131 3.547 3.19A84 84 0 0 0 8 46.5c1.187 0 2.097-.017 2.784-.04c1.749-.059 3.346-1.2 3.547-3.19c.096-.944.169-2.304.169-4.27s-.073-3.326-.168-4.27c-.202-1.99-1.8-3.131-3.548-3.19A84 84 0 0 0 8 31.5a84 84 0 0 0-2.784.04c-1.749.059-3.346 1.2-3.547 3.19c-.096.944-.169 2.304-.169 4.27m32-7c0 5.686.132 8.914.264 10.726c.146 2.01 1.614 3.578 3.702 3.706c.664.04 1.497.068 2.534.068s1.87-.028 2.534-.068c2.088-.128 3.556-1.696 3.702-3.706c.132-1.812.264-5.04.264-10.726s-.132-8.914-.264-10.726c-.146-2.01-1.614-3.578-3.702-3.706A42 42 0 0 0 40 17.5c-1.037 0-1.87.028-2.534.068c-2.088.128-3.556 1.696-3.702 3.706c-.132 1.812-.264 5.04-.264 10.726m-16 4c0 3.411.099 5.564.212 6.917c.173 2.048 1.74 3.447 3.721 3.534c.664.029 1.506.049 2.567.049c1.06 0 1.903-.02 2.567-.05c1.98-.086 3.548-1.485 3.72-3.533c.114-1.353.213-3.506.213-6.917s-.099-5.564-.212-6.917c-.173-2.048-1.74-3.447-3.721-3.534A59 59 0 0 0 24 25.5c-1.06 0-1.903.02-2.567.05c-1.98.086-3.548 1.485-3.72 3.533c-.114 1.353-.213 3.506-.213 6.917" />
+                        <path fill="#2859c5"
+                            d="M42.171 1.525a33.2 33.2 0 0 0-7.795.63c-2.003.41-2.546 2.819-1.217 4.147l1.791 1.792c-.57.518-1.308 1.198-2.14 1.991c-1.939 1.847-4.43 4.342-6.565 6.879a.19.19 0 0 1-.152.06a.2.2 0 0 1-.073-.016a.1.1 0 0 1-.026-.023a97 97 0 0 0-3.381-4.472c-1.235-1.527-3.443-1.92-5.126-.779c-2.406 1.632-7.403 5.392-12.993 11.784q-.508.582-1.024 1.193a2 2 0 0 0 3.06 2.577q.49-.582.976-1.137c5.214-5.963 9.852-9.482 12.086-11.011a94 94 0 0 1 3.148 4.17c1.598 2.238 4.863 2.252 6.565.23c2-2.377 4.373-4.758 6.264-6.559a116 116 0 0 1 2.213-2.055l1.917 1.916c1.328 1.329 3.736.786 4.147-1.217c.697-3.396.69-6.38.63-7.795a2.4 2.4 0 0 0-2.305-2.305" />
+                    </g>
+                </svg>
+
+            </div>
+            <div class="card-text">
+
+                <div class="card-head">
+                    Scalable for Multi-entity
+                </div>
+                <div class="card-para">
+                    From single to multiple-branch organisation.
+                </div>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" width="1em" height="1em" viewBox="0 0 50 50">
+                    <path d="M0 0h50v50H0z" fill="none" />
+                    <g fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
+                        <path stroke="#344054" d="m18.75 22.917l4.167 4.166l8.333-8.333" />
+                        <path stroke="#306CFE"
+                            d="m25 43.75l1.833-.792a22.92 22.92 0 0 0 13.813-19.291l.896-11.5a2.08 2.08 0 0 0-1.584-2.084L25 6.25L10.042 10a2.08 2.08 0 0 0-1.584 2.083l.896 11.5a22.92 22.92 0 0 0 13.813 19.292z" />
+                    </g>
+                </svg>
+
+            </div>
+            <div class="card-head">
+                Secure & compliant
+            </div>
+            <div class="card-para">
+                Muliple-legal entitie and statutory registration.
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="section">
+    <div class="section-head">
+        Ready to transform your HR Operations?
+    </div>
+    <div class="section-para">
+        See how HR MINDS can simplify HR, improve compliance and help your organisation grow.
+    </div>
+    <div class="buttons">
+        <button (click)="goToAssessment()">Request A Demo<svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                height="1em" viewBox="0 0 1024 1024">
+                <path d="M0 0h1024v1024H0z" fill="none" />
+                <path fill="#fff"
+                    d="M869 487.8L491.2 159.9c-2.9-2.5-6.6-3.9-10.5-3.9h-88.5c-7.4 0-10.8 9.2-5.2 14l350.2 304H152c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h585.1L386.9 854c-5.6 4.9-2.2 14 5.2 14h91.5c1.9 0 3.8-.7 5.2-2L869 536.2a32.07 32.07 0 0 0 0-48.4" />
+            </svg>
+        </button>
+        <button class="footer-btn" (click)="callUs()">
+            Talk to our team
+        </button>
+
+        <!-- <a href="tel:+916361980139" class="footer-btn">Talk to our team</a> -->
+    </div>
+
+</div>
