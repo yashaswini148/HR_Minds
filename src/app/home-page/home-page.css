@@ -2,7 +2,7 @@
     padding: 40px 60px;
     /* background-color: rgb(42, 42, 95); */
     background-image: url("/image/home-section-bg.png");
-    background-size: cover;
+    background-size: 100% 95%;
     background-repeat: no-repeat;
     height: 67vh;
 }
@@ -34,10 +34,11 @@
 .footer {
     display: flex;
     justify-content: space-around;
-    color: white;
+    color: black;
     border-radius: 5px;
     padding: 20px;
     font-family: "Open Sans";
+        background-color: #dedede;
 }
 
 .footer-part {
@@ -730,6 +731,7 @@ button {
 }
 
 .payroll-step {
+    position: relative;
     display: flex;
     background-color: white;
     padding: 10px 20px;
@@ -739,6 +741,10 @@ button {
     align-items: center;
     width: 33%;
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.payroll-step-head{
+    width: 60%;
 }
 
 .payroll-step svg {
@@ -845,7 +851,7 @@ button {
     display: flex;
     flex-direction: column;
     color: rgb(0, 0, 0);
-    padding: 20px;
+    padding: 20px 20px 20px 60px;
     gap: 20px;
     height: auto;
 }
@@ -1084,7 +1090,7 @@ button {
   border-radius: 0% 100% 100% 0% / 0% 50%  50% 0%;
     position: absolute;
     left: 0px;
-    top: 2218px;
+    top: 2242px;
 }
 
 .curve-line-1 {
@@ -1139,6 +1145,16 @@ right:186px;
 top: 2135px;
 }
 
+.circle-4 {
+  position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: #a2b5dc38;
+    border-radius: 50%;
+right:186px;
+top: 0px;
+}
+
 .shape {
   position: absolute;
   border-radius: 0% 100% 100% 0% / 0% 50%  50% 0%;
@@ -1157,8 +1173,8 @@ top: 2135px;
 }
 
 .shape-blue {
-    width: 13%;
-    height: 71%;
+    width: 11%;
+    height: 59%;
     right: 0px;
     top: 635px;
   background: rgba(64, 137, 255, 0.12);
@@ -1189,12 +1205,20 @@ top: 2135px;
 .line-purple {
     --color: #bec7f436;
     width: 60%;
-    height: 610px;
+height: 594px;
     left: 602px;
-    top: 2427px;
+    top: 2437px;
 }
 
 .line-orange {
+    --color: #f4d4be36;
+    width: 64.5%;
+    height: 495px;
+    left: 534px;
+    top: 2485px;
+}
+
+.line-orange-1 {
     --color: #f4d4be36;
     width: 64.5%;
     height: 495px;
@@ -1212,6 +1236,19 @@ top: 2135px;
     border-radius: 592px;
     opacity: .35;
     background: #75481a;
+    filter: blur(150px);
+}
+
+.color-1 {
+    position: absolute;
+    top: 600px;
+    left: 10px;
+    width: 10%;
+    height: 592px;
+    flex-shrink: 0;
+    border-radius: 592px;
+    opacity: .35;
+    background: #b1b9de;
     filter: blur(150px);
 }
 
