@@ -173,7 +173,7 @@ button {
 .seven-top-line {
     font-size: 16px;
     font-weight: 500;
-    color: white;
+    color: black;
     font-family: "DM Sans";
 }
 
@@ -831,7 +831,8 @@ button {
 }
 
 .section-seven {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
 }
 
 .section-left-head {
@@ -843,13 +844,10 @@ button {
 .section-left {
     display: flex;
     flex-direction: column;
-    color: white;
+    color: rgb(0, 0, 0);
     padding: 20px;
     gap: 20px;
-    background-color: #070745;
-    justify-content: center;
-    align-items: center;
-    height: 63vh;
+    height: auto;
 }
 
 .cards-top {
@@ -876,27 +874,27 @@ button {
 }
 
 .seven-cards {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    place-items: center;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 3px;
 }
 
 .seven-card {
     border-radius: 5px;
-    color: white;
+    color: black;
     height: 20px;
-    width: 220px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-start;
     gap: 5px;
-    padding: 20px 10px;
+    padding:10px;
 }
 
 .seven-card:hover {
-    background-color: white;
-    color: black;
+    background-color: rgb(104, 104, 145);
+    color: white;
     border-left: 2px solid orange;
 }
 
@@ -909,7 +907,7 @@ button {
     background: orange;
     color: white;
     padding: 12px;
-    width: 100%;
+    width: 35%;
     border: 2px solid orange;
     border-radius: 7px;
     font-weight: 800;
@@ -1002,7 +1000,7 @@ button {
 }
 
 .card-details {
-    width: 44%;
+    width: 100%;
     padding: 20px 51px 0px 25px;
     box-sizing: border-box;
     gap: 12px;
@@ -1086,7 +1084,7 @@ button {
   border-radius: 0% 100% 100% 0% / 0% 50%  50% 0%;
     position: absolute;
     left: 0px;
-    top: 2050px;
+    top: 2218px;
 }
 
 .curve-line-1 {
@@ -1108,7 +1106,7 @@ button {
     background-color: #a2b5dc38;
     border-radius: 50%;
     right: 224px;
-    top: 1906px;
+    top: 2098px;
 }
 
 .circle-1 {
@@ -1118,7 +1116,7 @@ button {
     background-color: #a2b5dc38;
     border-radius: 50%;
     right: 160px;
-    top: 1982px;
+    top: 2175px;
 }
 
 .circle-2 {
@@ -1128,7 +1126,7 @@ button {
     background-color: #a2b5dc38;
     border-radius: 50%;
     right: 241px;
-    top: 2014px;
+    top: 2215px;
 }
 
 .circle-3 {
@@ -1138,7 +1136,7 @@ button {
     background-color: #a2b5dc38;
     border-radius: 50%;
 right:186px;
-top: 1941px;
+top: 2135px;
 }
 
 .shape {
@@ -1170,7 +1168,7 @@ top: 1941px;
     width: 11%;
     height: 65%;
     left: 0px;
-    top: 2999px;
+    top: 3163px;
         background: rgba(255, 130, 30, 0.13);
 }
 
@@ -1193,7 +1191,7 @@ top: 1941px;
     width: 60%;
     height: 610px;
     left: 602px;
-    top: 2272px;
+    top: 2427px;
 }
 
 .line-orange {
@@ -1201,7 +1199,7 @@ top: 1941px;
     width: 64.5%;
     height: 495px;
     left: 534px;
-    top: 2328px;
+    top: 2485px;
 }
 
 .color{
@@ -1223,7 +1221,7 @@ top: 1941px;
     height: 96px;
     background: #001dff0a;
     transform: rotate(12deg);
-    top: 3099px;
+    top: 3288px;
     left: 900px;
 }
 
@@ -1233,7 +1231,7 @@ top: 1941px;
     height: 50px;
     background: #001dff0a;
 transform: rotate(-19deg);
-    top: 3211px;
+    top: 3399px;
     left: 871px;
 }
 
@@ -1243,165 +1241,10 @@ transform: rotate(-19deg);
     height: 35px;
     background: #001dff0a;
     transform: rotate(35deg);
-    top: 3133px;
-    left: 1021px;
+    top: 3348px;
+    left: 1012px;
 }
 
-/* @media (max-width: 1439px) {
-    .section{
-        padding: 30px;
-    }
-
-    button{
-        width: 20%;
-    }
-
-    .section-four{
-        padding: 30px;
-    }
-
-    .section-top-line{
-        font-size: 18px;
-    }
-
-    .section-four-head{
-        font-size: 30px;
-    }
-
-    .cards{
-        gap: 10px;
-    }
-
-    .card{
-        width: 22%;
-    }
-
-    .card-head{
-        font-size: 18px;
-    }
-
-    .card-para{
-        font-size: 14px;
-    }
-
-    .section-five{
-        padding: 10px;
-        gap: 5px;
-    }
-
-    .section-head-line{
-        font-size: 16px;
-    }
-
-    .section-five ul {
-        font-size: 14px;
-    }
-
-        .section-six {
-        padding: 10px 30px;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-areas:
-            "top top"
-            "left right";
-    }
-
-    .payroll-left {
-        grid-area: top;
-        gap: 5px;
-    }
-
-    .payroll-right {
-        grid-area: left;
-    }
-
-    .payroll-image {
-        grid-area: right;
-    }
-
-        .section-three {
-        padding: 30px;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .attendance-img{
-        display: none;
-    }
-
-    .section-left{
-        padding: 20px;
-        height: auto;
-        align-items: flex-start;
-    }
-
-    .section-seven{
-        flex-direction: column;
-    }
-
-    .card-details{
-        width: 100%;
-        padding: 20px;
-    }
-
-    .seven-para{
-        width: 100%;
-    }
-
-    .module-btn{
-        align-self: center;
-    }
-
-    .seven-cards{
-        grid-template-columns: repeat(4, 1fr);
-    }
-
-    .approval-top-line, .attendance-top-line{
-        font-size: 18px;
-    }
-
-    .approval-head{
-        font-size: 34px;
-    }
-
-    .attendance-head{
-        font-size: 34px;
-    }
-
-    .approval-para{
-        font-size: 16px;
-    }
-
-    .attendance-para{
-        font-size: 16px;
-    }
-
-    .stat-head{
-        font-size: 18px;
-    }
-
-    .stat-para{
-        font-size: 14px;
-    }
-
-    .approval-left-bottom{
-        flex-direction: row;
-        flex-wrap: wrap;
-        gap: 20px;
-    }
-
-    .payroll-top {
-            gap: 5px;
-    font-size: 18px;
-    }
-
-    .blue, .orange, .green {
-        width: 11%;
-    height: 40%;
-    }
-
-    .payroll-step{
-        width: 25%;
-    }
-} */
 
 @media (max-width: 1023px) {
 
