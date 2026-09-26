@@ -294,11 +294,11 @@ button {
     justify-content: center;
     align-items: center;
     border-radius: 12px;
-    background-color: rgb(203, 203, 252);
-    width: 17%;
-    height: 30%;
-    font-size: 24px;
 
+    font-size: 26px;
+        position: relative;
+    bottom: 40px;
+    left: 48px;
 }
 
 .card-text {
@@ -463,7 +463,7 @@ button {
     border-radius: 12px;
     padding: 15px;
     width: 20%;
-    height: 130px;
+    height: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -473,10 +473,10 @@ button {
 }
 
 .card-head {
-    font-size: 22px;
+    font-size: 20px;
     color: rgb(3, 3, 86);
     font-family: "DM sans";
-
+    width: 70%;
 }
 
 .card-para {
@@ -717,6 +717,12 @@ button {
     grid-template-columns: 1.25fr 1fr 1fr;
     background-color: #fbfbfb;
 
+}
+
+.payroll-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .payroll-image img {
@@ -983,7 +989,17 @@ button {
     box-shadow: 0 6px 18px rgba(0, 0, 0, 0.25);
 }
 
-
+.card-top{
+        display: flex;
+    height: 80%;
+    background-color: #d5ddf5;
+    width: 98%;
+    padding: 40px 15PX;
+    border-radius: 16px;
+    border: 2px solid blue;
+        position: relative;
+    bottom: 14px;
+}
 
 .card-details {
     width: 44%;
